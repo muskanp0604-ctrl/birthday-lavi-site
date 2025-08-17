@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Lavi Baby</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ffe6f0, #fff0f5);
+      overflow-x: hidden;
+      position: relative;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff1493;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      margin: 15px auto;
+      max-width: 600px;
+      color: #333;
+    }
+    .music-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 15px 0;
+      background: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      text-decoration: none;
+    }
+    .photos img {
+      width: 200px;
+      margin: 10px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+    }
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      animation: float 6s linear infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); }
+      100% { transform: translateY(-50vh) rotate(360deg); }
+    }
+    /* Photo slideshow */
+    #slideshow {
+      width: 300px;
+      border-radius: 15px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.2);
+      margin: 20px auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎂 Happy Birthday Lavi Baby 🎂</h1>
+
+  <p>
+    Today is special for you ✨🌻 I want to meet you but maybe it’s not possible. I want to make you feel special on your special day but I couldn't… So this is a small effort for you from my side on your birthday baby ❤️ I hope you feel happy and like it my love 😍.<br>
+    I love you my lavi davi, my love, my babe ❤️💞😘🧿✨<br>
+    Again Happiest birthday my sweetheart, my darling ❤️
+  </p>
+
+  <p>
+    Jb ap blush krte ho mujhe dekh kr mujhe bhut acha lgta h 🥰.<br>
+    Vo pyari si smile apki, apke red cheeks wowww 💝 aur apki awaj to aisa lgta h ki hmesa mai sunti rhu 🍯.<br>
+    Itni sweet, smooth, calm si voice mere dil ko bhut achi lgti h 🤩 aur jb ap mujhse pyar se bolte ho ki tu mera bachha h — I like it so muchh ❤️.<br>
+    I love you so muchhhhhhhhh my man, my lavi davi ❤️💞💫💌
+  </p>
+
+  <a class="music-button" href="your-music-file.mp3" target="_blank">🎶 Play Music 💌 Click for a Surprise</a>
+
+  <div class="photos">
+    <img id="slideshow" src="photo1.jpg" alt="Photo Slideshow">
+  </div>
+
+  <div class="footer">
+    Made with ❤️ by your Muskan, your Bachha 💓
+  </div>
+
+  <audio autoplay loop>
+    <source src="your-music-file.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating hearts -->
+  <script>
+    for(let i=0; i<20; i++){
+      let heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random()*100 + 'vw';
+      heart.style.fontSize = (10 + Math.random()*30) + 'px';
+      heart.innerText = '❤️';
+      heart.style.animationDuration = (4 + Math.random()*4) + 's';
+      document.body.appendChild(heart);
+    }
+  </script>
+
+  <!-- Photo slideshow -->
+  <script>
+    let photos = ['photo1.jpg','photo2.jpg'];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % photos.length;
+      document.getElementById('slideshow').src = photos[index];
+    }, 3000);
+  </script>
+
+</body>
+</html>
